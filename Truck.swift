@@ -11,7 +11,7 @@ class Truck: Vehicle {
     private(set) var speed: Int
     let maxSpeed: Int
     private(set) var quantityWheels: Int
-    var colour: String    
+    var colour: String
 
     init (startColour: String, startMaxSpeed: Int, startLicensePlate: String,
           initialQuantityWheels: Int) {
@@ -40,7 +40,7 @@ class Truck: Vehicle {
     }
 
     func brake(brakeAmount: Int) {
-        if brakeAmount > speed { 
+        if brakeAmount > speed {
            print("Cannot brake more than the current speed")
         } else {
            speed -= brakeAmount

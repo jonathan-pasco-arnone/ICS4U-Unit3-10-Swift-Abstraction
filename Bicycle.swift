@@ -12,7 +12,7 @@ class Bicycle: Vehicle {
     private(set) var speed: Int
     let maxSpeed: Int
     private(set) var quantityWheels: Int
-    var colour: String    
+    var colour: String
 
     // Constructor for all items
     init (startColour: String, startMaxSpeed: Int, initialQuantityWheels: Int, startCadence: Int, startBasket: Bool) {

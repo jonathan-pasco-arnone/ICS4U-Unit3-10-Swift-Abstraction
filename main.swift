@@ -21,7 +21,7 @@ let zeus: Bicycle = Bicycle(startColour: "Red", startMaxSpeed: 30,
 * Compiling an abstract class will cause an error, so this code
 * does not work.
 */
-let helicopter: Vehicle = Vehicle()
+// let helicopter: Vehicle = Vehicle()
 
 print("Zeus has ", zeus.quantityWheels, " wheels.")
 

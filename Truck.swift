@@ -8,21 +8,42 @@
 
 class Truck: Vehicle {
     var licensePlate: String
+    private(set) var speed: Int
+    let maxSpeed: Int
+    private(set) var quantityWheels: Int
+    var colour: String    
 
     init (startColour: String, startMaxSpeed: Int, startLicensePlate: String,
           initialQuantityWheels: Int) {
-        self.licensePlate = startLicensePlate
-        super.init(startColour: startColour, vehicleMaxSpeed: startMaxSpeed,
-                   initialQuantityWheels: initialQuantityWheels)
-        super.speed = 0
+        licensePlate = startLicensePlate
+        colour = startColour
+        maxSpeed = startMaxSpeed
+        quantityWheels = initialQuantityWheels
+        speed = 0
     }
 
     func provideAir(amountOfAir: Int) {
-        if amountOfAir * 2 > super.speed {
+        if amountOfAir * 2 > speed {
             print("Cannot use air brake that amount.",
                   " It is more than the speed")
         } else {
-            super.speed -= amountOfAir * 2
+            speed -= amountOfAir * 2
+        }
+    }
+
+    func accelerate(acceleration: Int) {
+        if acceleration + speed > maxSpeed {
+            print("Cannot accelerate more than the maximum speed")
+        } else {
+            speed += acceleration
+        }
+    }
+
+    func brake(brakeAmount: Int) {
+        if brakeAmount > speed { 
+           print("Cannot brake more than the current speed")
+        } else {
+           speed -= brakeAmount
         }
     }
 }

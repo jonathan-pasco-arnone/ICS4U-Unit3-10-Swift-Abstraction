@@ -17,8 +17,11 @@ let zeus: Bicycle = Bicycle(startColour: "Red", startMaxSpeed: 30,
                             initialQuantityWheels: 2, startCadence: 0,
                             startBasket: true)
 
-cheif.licensePlate = "B2J9VH"
-print("Cheif's license plate is ", cheif.licensePlate)
+/*
+* Compiling an abstract class will cause an error, so this code
+* does not work.
+*/
+let helicopter: Vehicle = Vehicle()
 
 print("Zeus has ", zeus.quantityWheels, " wheels.")
 
